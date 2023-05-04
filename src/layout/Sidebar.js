@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import twitterLogo from "../images/twitter.svg";
 import SideLink from '../components/SideLink';
-
-import { HomeIcon, ExploreIcon, NotificationsIcon, MessagesIcon, BookmarksIcon, ListsIcon, ProfileIcon, MoreIcon, } from '../icons/icon';
 import UserBox from '../components/UserBox';
+
+import {
+  BookmarksIcon,
+  ExploreIcon,
+  HomeIcon,
+  ListsIcon,
+  MessagesIcon,
+  MoreIcon,
+  NotificationsIcon,
+  ProfileIcon,
+       } from '../icons/icon';
+
 
 
 const sideLinks = [
@@ -44,13 +54,13 @@ const sideLinks = [
 
 
 const Sidebar = () => {
-  const {active,setActive} = useState("Home");
+  const [active,setActive] = useState("Home");
 
   const handleMenuItemClick = (name) => {
            setActive(name);
   };
   return (
-    <div className=" h-screen sticky top-0 flex flex-col justify-between w-72 px-2">
+    <div className=" h-screen sticky top--1 flex flex-col justify-between w-72 px-2">
       <div>
         <div className=' mt-1 mb-4 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-lightest transform transition-colors duration-200'>
         <img src={twitterLogo}  alt="Twitter Logo" className='w-9 h-9'></img>
